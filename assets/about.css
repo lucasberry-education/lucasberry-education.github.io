@@ -1,0 +1,60 @@
+.about-hero {
+  background: radial-gradient(ellipse at 93% 0%, #ceddd5aa, transparent 65%),
+    linear-gradient(112deg, var(--paper), #e8efe7);
+}
+
+.about-timeline {
+  margin: 1.25rem 0 .15rem .45rem;
+  padding: 0 0 0 1.35rem;
+  list-style: none;
+  border-left: 2px solid var(--sage);
+}
+
+.about-timeline li { position: relative; padding: 0 0 1.1rem; }
+.about-timeline li:last-child { padding-bottom: 0; }
+.about-timeline li::before {
+  content: "";
+  position: absolute;
+  top: .3rem;
+  left: calc(-1.35rem - 7px);
+  width: 12px;
+  height: 12px;
+  border: 2px solid var(--teal);
+  border-radius: 50%;
+  background: var(--paper);
+}
+
+.content-stack .about-timeline h3 { margin-bottom: .3rem; font-size: 1.12rem; }
+.about-link { margin-top: .85rem; }
+
+.about-expertise-panel {
+  padding: clamp(1rem, 3vw, 1.55rem);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #edf2eb;
+}
+
+.about-skill-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: .85rem;
+}
+
+.about-skill-grid li {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.about-skill-grid li::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  flex: 0 0 6px;
+  border-radius: 50%;
+  background: var(--teal);
+}
+
+@media (max-width: 450px) {
+  .about-skill-grid { grid-template-columns: minmax(0, 1fr); }
+}

@@ -1,0 +1,24 @@
+@import url("classroom-case.css");
+
+.investigation-objectives { padding-left: 1.3rem; margin-top: .65rem; }
+.investigation-objectives li + li { margin-top: .4rem; }
+.investigation-components { display: grid; gap: 1rem; margin-top: 1.2rem; }
+.investigation-component {
+  padding: clamp(1rem, 3vw, 1.4rem);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--white);
+}
+.investigation-symbol {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  margin-bottom: .7rem;
+  border-radius: 8px;
+  color: var(--forest);
+  background: #e8efe7;
+  font: 700 1.4rem/1 "Segoe UI Symbol", system-ui, sans-serif;
+}
+.investigation-skills { margin-top: .9rem; }
+.investigation-materials { margin-top: .9rem; }

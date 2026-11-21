@@ -1,0 +1,75 @@
+@import url("classroom-case.css");
+
+.travel-hero .travel-hero-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(1.5rem, 5vw, 4rem);
+}
+
+.travel-hero-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: center 57%;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: 0 2px 8px #193d3709;
+}
+
+.travel-objectives, .travel-steps {
+  margin: .75rem 0 0;
+  padding-left: 1.4rem;
+}
+
+.travel-objectives li + li, .travel-steps li + li { margin-top: .55rem; }
+.travel-steps li::marker { color: var(--forest); font-weight: 700; }
+
+.travel-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: .75rem;
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.travel-gallery .project-card { height: 100%; }
+
+.travel-gallery-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  object-fit: contain;
+  padding: .4rem;
+  background: #e8efe7;
+  border-bottom: 1px solid var(--line);
+}
+
+.travel-gallery-copy {
+  display: grid;
+  gap: .35rem;
+  padding: .75rem .85rem .9rem;
+}
+
+.travel-gallery-title { color: var(--forest); font-weight: 750; line-height: 1.3; }
+.travel-gallery-caption { color: var(--muted); font-size: .86rem; line-height: 1.45; }
+.travel-gallery-action { color: var(--forest); font-size: .78rem; font-weight: 700; margin-top: .15rem; }
+.travel-resources { margin-top: .9rem; }
+
+@media (max-width: 860px) {
+  .travel-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 620px) {
+  .travel-hero .travel-hero-layout { grid-template-columns: minmax(0, 1fr); }
+  .travel-hero-image { aspect-ratio: 16 / 7; }
+}
+
+@media (max-width: 430px) {
+  .travel-gallery { grid-template-columns: minmax(0, 1fr); }
+  .travel-gallery-image { max-height: 22rem; }
+}

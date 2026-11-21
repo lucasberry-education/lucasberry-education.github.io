@@ -1,0 +1,38 @@
+.classroom-card .classroom-card-image, .case-feature-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  height: auto;
+}
+.classroom-card .classroom-card-copy {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 1.25rem;
+  gap: .75rem;
+}
+.classroom-card h3 { font-size: 1.45rem; }
+.classroom-card .classroom-card-description { color: var(--muted); font-size: .95rem; }
+.classroom-card .classroom-card-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .3rem .7rem;
+  list-style: none;
+  padding: 0;
+  color: var(--forest);
+  font-size: .8rem;
+  font-weight: 650;
+}
+.classroom-card .classroom-card-action { margin-top: auto; padding-top: .5rem; font-weight: 750; font-size: .9rem; color: var(--forest); }
+.project-image-note, .case-feature figcaption { color: var(--muted); font-size: .78rem; line-height: 1.5; }
+.project-image-note { margin-top: 1.1rem; }
+.case-feature { min-width: 0; }
+.case-feature figcaption { margin-top: .45rem; }
+.page-hero .case-feature:only-of-type { margin-top: 1.4rem; }
+.case-feature-image { max-height: 340px; border-radius: 14px; border: 1px solid var(--line); }
+.travel-hero-layout .case-feature:only-of-type { margin-top: 0; }
+@media (min-width: 921px) {
+  .classroom-card h3 { min-height: 3.4em; }
+  .classroom-card .classroom-card-description { min-height: 6.4em; }
+}
